@@ -5,26 +5,24 @@
 
 int main(void)
 {
-    // get user name
+    // prompt user for name
     string name = GetString();
     
-    // print uppercase first character
+    // print capitalized first character of name
     printf("%c", toupper(name[0]));
    
-    // loop
+    // loop rest of name 
     for ( int i = 0, n = strlen(name); i < n; i++)
     {
-        // check remainder of characters & space
+        // check space and end name string
         if ( name[i] == ' ' && name[i + 1] != '\0') 
         {
-            // print initial remainder
+            // print rest of the initials 
             printf("%c",toupper(name[i + 1])); 
             i++;
-      
         }
-       
     }
     
-    // print a new line after the initials
+    // add new line after initials
     printf("\n"); 
 }
